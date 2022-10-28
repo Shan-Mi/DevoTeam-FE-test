@@ -19,6 +19,7 @@ export const SearchBarWrapper = styled.div`
     grid-row: 1;
     grid-column: 2;
     margin-bottom: unset;
+    height: 24px;
   }
 `
 
@@ -43,5 +44,18 @@ export const Input = styled.input`
 
   &:focus-visible {
     outline: #c55959b5 solid 2px;
+  }
+`
+export const ClearBtn = styled.button`
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+
+  @media (min-width: 768px) {
+    right: 5px;
+
   }
 `
