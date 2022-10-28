@@ -1,6 +1,7 @@
 import React from 'react'
 import Email from '../../assets/Email.svg'
 import Phone from '../../assets/Phone.svg'
+import NoResult from '../NoResult/NoResult'
 import {
   Avatar,
   BottomCard,
@@ -17,6 +18,9 @@ import {
 const ThumbnailCards = ({ results, loading }) => {
   if (loading) return Skeleton
 
+  if (!results.length) {
+    return <NoResult />
+  }
   return (
     <ThumbnailCardsWrapper data-testid="thumbnail-cards">
       {results?.map(

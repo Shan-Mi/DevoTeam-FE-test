@@ -1,6 +1,7 @@
 import React from 'react'
 import Email from '../../assets/Email.svg'
 import Phone from '../../assets/Phone.svg'
+import NoResult from '../NoResult/NoResult'
 import {
   Avatar,
   CardsWrapper,
@@ -16,6 +17,10 @@ import {
 
 const ListCard = ({ results, loading }) => {
   if (loading) return Skeleton
+
+  if (!results.length) {
+    return <NoResult />
+  }
 
   return (
     <CardsWrapper data-testid="list-cards">
