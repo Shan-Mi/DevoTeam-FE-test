@@ -34,11 +34,14 @@ const ListCard = ({ results, loading }) => {
           },
           i
         ) => (
-          <ListCardWrapper index={i % 5} key={email} data-testid="list-card">
+          <ListCardWrapper
+            index={i % 5}
+            key={email}
+            data-testid={`list-card-${i + 1}`}>
             <ContentWrapper>
               <Avatar src={large} data-testid="list-card-avatar" />
               <NameLocationWrapper>
-                <Name data-testid="list-card-name">
+                <Name data-testid={`list-card-name-${i + 1}`}>
                   {first} {last}
                 </Name>
                 <City data-testid="list-card-city">{city}</City>

@@ -33,7 +33,7 @@ const ThumbnailCards = ({ results, loading }) => {
           },
           i
         ) => (
-          <CardWrapper key={email} data-testid="thumbnail-card">
+          <CardWrapper key={email} data-testid={`thumbnail-card-${i + 1}`}>
             <TopCard color={i % 5} />
             <BottomCard color={i % 5} />
             <UserInfoWrapper>

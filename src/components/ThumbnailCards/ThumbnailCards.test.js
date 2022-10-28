@@ -24,7 +24,7 @@ describe('ThumbnailCards components', () => {
 
     it('When loading, there should not have any thumbnailCards', () => {
       expect(
-        thumbnailCards.find('[data-testid="thumbnail-card"]').length
+        thumbnailCards.find('[data-testid="thumbnail-cards"]').children().length
       ).toEqual(0)
     })
   })
@@ -42,7 +42,7 @@ describe('ThumbnailCards components', () => {
 
     it('When not loading, it should render 2 thumbnailCards', () => {
       expect(
-        thumbnailCards.find('[data-testid="thumbnail-card"]').length
+        thumbnailCards.find('[data-testid="thumbnail-cards"]').children().length
       ).toEqual(2)
     })
 

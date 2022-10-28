@@ -19,7 +19,9 @@ describe('listCards components', () => {
     })
 
     it('When not loading, it should render 2 listCards', () => {
-      expect(listCards.find('[data-testid="list-card"]').length).toEqual(2)
+      expect(
+        listCards.find('[data-testid="list-cards"]').children().length
+      ).toEqual(2)
     })
 
     it('should contain correct url for avatar', () => {
@@ -29,9 +31,9 @@ describe('listCards components', () => {
     })
 
     it('should render correct name', () => {
-      expect(
-        listCards.find('[data-testid="list-card-name"]').first().text()
-      ).toEqual('test-1 user-1')
+      expect(listCards.find('[data-testid="list-card-name-1"]').text()).toEqual(
+        'test-1 user-1'
+      )
     })
 
     it('should render location', () => {
