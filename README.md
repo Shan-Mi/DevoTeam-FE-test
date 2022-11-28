@@ -8,7 +8,7 @@
 - run `yarn start` to start app
 - run `yarn test` to run unit test
 
-Features (menditory✅ & extra🌟)
+Features (mandatory & extra🌟)
 
 1. ✅ Fetch data from api, by default, it will render the list view. Results are sorted by asc by default.
 2. ✅ If you click the sort-icon, results will be sorted by desc and the icon will also change to a different one to indicate that.
